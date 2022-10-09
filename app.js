@@ -9,9 +9,9 @@ app.use(express.json());
 app.use(cors());
 
 //Routes
-app.use(require('./Routes/index.js'));
+app.use('/api', require('./Routes/index.js'));
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('wenas');
 })
 
